@@ -107,9 +107,9 @@ Then, there should exist another runtime argument named input that should a nume
 
 
 
-More information can be found here
+For more detailed information visit
 
-* [Constructing Expressions](https://github.com/hydrator/condition-plugins/wiki/Expression)
-  * [About Variables](https://github.com/hydrator/condition-plugins/wiki/Variables)
-  * [Allowed Operators](https://github.com/hydrator/condition-plugins/wiki/Operators)
-* [Using Macros](https://github.com/hydrator/condition-plugins/wiki/Macros)
+* Constructing Expressions (https://github.com/hydrator/condition-plugins/wiki/Expression)
+  * About Variables (https://github.com/hydrator/condition-plugins/wiki/Variables)
+  * Allowed Operators (https://github.com/hydrator/condition-plugins/wiki/Operators)
+* Using Macros (https://github.com/hydrator/condition-plugins/wiki/Macros)
