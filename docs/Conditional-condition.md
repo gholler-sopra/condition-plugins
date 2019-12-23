@@ -81,7 +81,7 @@ is a map variable containing general information from the pipeline.
 
   ```runtime['input'] > token['Data Quality']['output']```
 
-Then, there should exist another runtime argument named input that should a numeric value and same holds true for plugin Data Quality that emits value for output.
+Then, there should exist another runtime argument named input that should be a numeric value. The same holds true for the accelerator Data Quality that emits value for output.
 
 ## A few examples for immediate reference Operators:
 
