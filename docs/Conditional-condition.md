@@ -1,18 +1,18 @@
 # Conditional
 
-A control flow plugin that allows conditional execution within
-pipelines. The conditions are specified as expressions and the
+Conditional is a Guavus Enterprise Accelerator that serves as a control flow plugin that allows conditional execution within
+pipelines. The conditions are specified as expressions and the 
 variables could include values specified as runtime arguments of
 the pipeline, token from plugins prior to the condition and global
 that includes global information about pipeline like stage, pipeline,
 logical start time and plugin.
 
-Condition plugin specifies a boolean expression to be evaluated.
-During pipeline execution, the condition expression specified is
-evaluated resulting in boolean value (either true or false).
-Depending on the result of evaluation, either the downstream pipeline
-connected along true path is executed or along the false path is
-executed. At at point in time, only one path is executed.
+The Conditional accelerator specifies a boolean expression to be evaluated.
+During a pipeline execution, the specified condition expression is
+evaluated, resulting in a boolean value (either true or false).
+Depending on the result of the evaluation, the downstream pipeline
+connected either along the true path or along the false path is
+executed. At any point in time, only one path is executed.
 
 
 ## A few examples for immediate reference Expression :
@@ -55,7 +55,7 @@ token['File']['output'] < runtime['count'] && token['File']['error'] < 1
 * Runtime Variables
 ```runtime['<argument-name>']```
 
-Is a map variable that holds runtime arguments specified for the pipeline containing an instance of the conditional plugin. If the conditional expression specifies a runtime argument that is not present, then deployment or validation of the pipeline would be terminated with an exception.
+is a map variable that holds runtime arguments specified for the pipeline containing an instance of the conditional plugin. If the conditional expression specifies a runtime argument that is not present, then deployment or validation of the pipeline would be terminated with an exception.
 
 All arguments should be specified within a quote '
 
@@ -63,13 +63,13 @@ All arguments should be specified within a quote '
 
    ```token['<plugin-name>']['input'|'output'|'error']```
 
-Is a multi-map variable that contains three metrics for each plugin predecessor to the instance of a conditional plugin in the DAG.
+is a multi-map variable that contains three metrics for each plugin predecessor to the instance of a conditional plugin in the DAG.
 
 * Global Variables
 
     ```global['pipeline'|'namespace'|'logical_start_time'|'plugin'])```
 
-Is a map variable containing general information from the pipeline.
+is a map variable containing general information from the pipeline.
 
 ## A few examples for immediate reference Macros:
 
