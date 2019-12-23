@@ -1,10 +1,10 @@
 # Conditional
 
-Conditional is a Guavus Enterprise Accelerator that serves as a control flow plugin that allows conditional execution within
+Conditional is a Guavus Enterprise Accelerator that serves as a control flow plugin and allows conditional execution within
 pipelines. The conditions are specified as expressions and the 
-variables could include values specified as runtime arguments of
-the pipeline, token from plugins prior to the condition and global
-that includes global information about pipeline like stage, pipeline,
+variables could include the following things: Values specified as runtime arguments of
+the pipeline, tokens from accelerators prior to the condition, and global
+that includes global information about the pipeline, like stage, pipeline,
 logical start time and plugin.
 
 The Conditional accelerator specifies a boolean expression to be evaluated.
@@ -55,7 +55,7 @@ token['File']['output'] < runtime['count'] && token['File']['error'] < 1
 * Runtime Variables
 ```runtime['<argument-name>']```
 
-is a map variable that holds runtime arguments specified for the pipeline containing an instance of the conditional plugin. If the conditional expression specifies a runtime argument that is not present, then deployment or validation of the pipeline would be terminated with an exception.
+is a map variable that holds runtime arguments specified for the pipeline containing an instance of the conditional accelerator. If the conditional expression specifies a runtime argument that is not present, then deployment or validation of the pipeline would be terminated with an exception.
 
 All arguments should be specified within a quote '
 
@@ -63,7 +63,7 @@ All arguments should be specified within a quote '
 
    ```token['<plugin-name>']['input'|'output'|'error']```
 
-is a multi-map variable that contains three metrics for each plugin predecessor to the instance of a conditional plugin in the DAG.
+is a multi-map variable that contains three metrics for each accelerator that precedes the instance of a conditional accelerator in DAG.
 
 * Global Variables
 
