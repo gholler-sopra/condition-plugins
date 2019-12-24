@@ -1,5 +1,7 @@
 # Conditional
 
+## Description
+
 Conditional is a Guavus Enterprise Accelerator that serves as a control flow plugin and allows conditional execution within
 pipelines. The conditions are specified as expressions and the 
 variables could include the following things: Values specified as runtime arguments of
